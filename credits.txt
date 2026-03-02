@@ -1,0 +1,11 @@
+frontier-forge-shipyard
+author:
+	LinearPerk
+	https://github.com/LinearPerk
+
+ship data:
+	Ship definitions by LinearPerk
+
+ship sprites:
+	All sprites by LinearPerk
+	Licensed GPL-3+

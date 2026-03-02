@@ -1,0 +1,750 @@
+# Frontier Forge Ships
+#
+# A decentralized network of independent shipwrights, garage builders,
+# and frontier machinists who build custom ships outside corporate
+# control. The Firefly line covers honest trade — small transports
+# and freighters with nacelle silhouettes and reinforced hulls. The
+# Draugr and Marauder are what happens when free people build for war.
+# 
+#
+# Ships:
+#   "Forge Grimnir" (Fighter)           — super heavy fighter, 4G
+#   "Forge Firefly" (Transport)         — small smuggler/runner
+#   "Forge Corsair" (Light Freighter)   — mid-tier smuggler
+#   "Forge Serenity" (Light Freighter)  — top-tier Firefly hauler
+#   "Forge Draugr" (Medium Warship)     — aggressive raider, 4G+3T+1Bay
+#   "Forge Marauder" (Heavy Warship)    — troop carrier + 2 fighter bays
+#   "Forge Crusader" (Heavy Warship)   — turret fortress, 12T
+
+ship "Forge Grimnir"
+	sprite "ship/forge grimnir"
+	attributes
+		category "Fighter"
+		"cost" 370000
+		"shields" 1100
+		"hull" 800
+		"required crew" 1
+		"bunks" 1
+		"mass" 42
+		"drag" 1.5
+		"heat dissipation" 0.80
+		"fuel capacity" 0
+		"cargo space" 0
+		"outfit space" 125
+		"weapon capacity" 50
+		"engine capacity" 42
+		weapon
+			"blast radius" 24
+			"shield damage" 180
+			"hull damage" 50
+			"hit force" 60
+	outfits
+		"Chipmunk Plasma Steering"
+		"Chipmunk Plasma Thruster"
+		"D14-RN Shield Generator"
+		"Beam Laser" 4
+		"nGVF-BB Fuel Cell"
+	gun -3.8 -40.6
+	gun 5.2 -40.6
+	gun -19.4 -11.2
+	gun 19.6 -11
+	engine -5.9 40.4 0.6
+	engine 8.2 40.7 0.6
+	leak "leak" 60 50
+	explode "tiny explosion" 18
+	explode "small explosion" 7
+	"final explode" "final explosion small"
+	description "The heaviest fighter money can buy. Four gun mounts, shields thicker than most interceptors, and hull plating that keeps it in the fight long after lesser fighters have been scrapped. At nearly twice the price of anything else in its weight class, it's an investment — but mercenary outfits and pirate motherships swear by them."
+
+ship "Forge Grimnir" "Forge Grimnir (Gatling)"
+	outfits
+		"Gatling Gun" 4
+		"Gatling Gun Ammo" 12000
+		"D14-RN Shield Generator"
+		"nGVF-AA Fuel Cell"
+
+		"Chipmunk Plasma Thruster"
+		"Chipmunk Plasma Steering"
+
+ship "Forge Grimnir" "Forge Grimnir (Laser)"
+	outfits
+		"Beam Laser" 4
+		"D14-RN Shield Generator"
+		"nGVF-BB Fuel Cell"
+
+		"Chipmunk Plasma Thruster"
+		"Chipmunk Plasma Steering"
+
+ship "Forge Grimnir" "Forge Grimnir (Heavy)"
+	outfits
+		"Heavy Laser" 2
+		"Beam Laser" 2
+		"D23-QP Shield Generator"
+		"nGVF-AA Fuel Cell"
+
+		"Chipmunk Plasma Thruster"
+		"Chipmunk Plasma Steering"
+
+ship "Forge Grimnir" "Forge Grimnir (Striker)"
+	outfits
+		"Beam Laser" 4
+		"D23-QP Shield Generator"
+		"nGVF-BB Fuel Cell"
+
+		"A120 Atomic Thruster"
+		"A125 Atomic Steering"
+
+ship "Forge Firefly"
+	sprite "ship/forge firefly"
+	attributes
+		category "Transport"
+		"cost" 580000
+		"shields" 1600
+		"hull" 800
+		"required crew" 2
+		"bunks" 8
+		"mass" 130
+		"drag" 3.2
+		"heat dissipation" 0.7
+		"fuel capacity" 500
+		"cargo space" 30
+		"outfit space" 165
+		"weapon capacity" 25
+		"engine capacity" 55
+		weapon
+			"blast radius" 40
+			"shield damage" 300
+			"hull damage" 150
+			"hit force" 200
+	outfits
+		"Chipmunk Plasma Steering"
+		"Greyhound Plasma Thruster"
+		"D23-QP Shield Generator"
+		"Beam Laser"
+		Hyperdrive
+		"LP036a Battery Pack"
+		"nGVF-BB Fuel Cell"
+	gun 0.3 -77.5
+	turret 0.5 -18
+	engine 0.2 72.1 1
+	"steering engine" -41.7 7.9 0.7
+		right
+	"steering engine" 41.5 7.9 0.7
+		left
+	"steering engine" -41 -21.5 0.6
+		angle -180
+		left
+	"steering engine" 41.3 -21.9 0.6
+		angle -180
+		right
+	leak "leak" 60 50
+	leak "flame" 50 80
+	explode "tiny explosion" 20
+	explode "small explosion" 15
+	explode "medium explosion" 5
+	"final explode" "final explosion small"
+	description "The Firefly is a small, scrappy transport built for running passengers and light cargo through rough space. Its side-mounted engine nacelles give it a distinctive profile, and while it won't win any fights, it can usually outrun them."
+
+ship "Forge Firefly" "Forge Firefly (Courier)"
+	outfits
+		"D14-RN Shield Generator"
+		"nGVF-BB Fuel Cell"
+		"LP036a Battery Pack"
+		Hyperdrive
+		"Fuel Pod" 2
+		"Greyhound Plasma Thruster"
+		"Chipmunk Plasma Steering"
+
+ship "Forge Firefly" "Forge Firefly (Armed)"
+	outfits
+		"Energy Blaster"
+		"Anti-Missile Turret"
+
+		"D14-RN Shield Generator"
+		"nGVF-BB Fuel Cell"
+		"LP036a Battery Pack"
+		Hyperdrive
+		"Greyhound Plasma Thruster"
+		"Chipmunk Plasma Steering"
+
+ship "Forge Firefly" "Forge Firefly (Smuggler)"
+	outfits
+		"D23-QP Shield Generator"
+		"nGVF-BB Fuel Cell"
+		"LP036a Battery Pack"
+		"Scram Drive"
+		"Interference Plating" 2
+		"Small Radar Jammer"
+		"Cargo Scanner"
+		"Greyhound Plasma Thruster"
+		"Chipmunk Plasma Steering"
+
+ship "Forge Firefly" "Forge Firefly (Blockade Runner)"
+	outfits
+		"Beam Laser"
+		"Anti-Missile Turret"
+
+		"D23-QP Shield Generator"
+		"nGVF-BB Fuel Cell"
+		"LP036a Battery Pack"
+		"Scram Drive"
+		"Greyhound Plasma Thruster"
+		"Chipmunk Plasma Steering"
+
+ship "Forge Corsair"
+	sprite "ship/forge corsair"
+	attributes
+		category "Light Freighter"
+		"cost" 1120000
+		"shields" 2600
+		"hull" 1800
+		"required crew" 3
+		"bunks" 12
+		"mass" 270
+		"drag" 5.2
+		"heat dissipation" 0.6
+		"fuel capacity" 500
+		"cargo space" 85
+		"outfit space" 280
+		"weapon capacity" 60
+		"engine capacity" 80
+		weapon
+			"blast radius" 80
+			"shield damage" 900
+			"hull damage" 350
+			"hit force" 800
+	outfits
+		"Chipmunk Plasma Steering"
+		"Impala Plasma Thruster"
+		"D41-HY Shield Generator"
+		"Quad Blaster Turret"
+		"Scram Drive"
+		"LP036a Battery Pack"
+		"nGVF-EE Fuel Cell"
+		"Interference Plating" 2
+	gun -4.8 -99.5
+	gun 5.1 -99.5
+	turret 0.5 3.5
+	engine 0.7 94.6 1.2
+	"steering engine" -55.2 21.4 0.9
+		right
+	"steering engine" 54.8 21.4 0.9
+		left
+	"steering engine" -55.5 -20.5 0.8
+		angle -180
+		left
+	"steering engine" 55.1 -20.4 0.8
+		angle -180
+		right
+	leak "leak" 60 50
+	leak "flame" 50 80
+	leak "big leak" 90 30
+	explode "tiny explosion" 25
+	explode "small explosion" 40
+	explode "medium explosion" 25
+	explode "large explosion" 5
+	"final explode" "final explosion medium"
+	description "The Corsair is the middle child of the Firefly line — bigger, tougher, and built to run cargo through contested space. A single turret and jamming equipment provide enough cover to slip through trouble, while the reinforced hull keeps her flying when things go wrong."
+
+ship "Forge Corsair" "Forge Corsair (Hauler)"
+	outfits
+		"Impala Plasma Thruster"
+		"Chipmunk Plasma Steering"
+		"D23-QP Shield Generator"
+		"nGVF-DD Fuel Cell"
+		"LP072a Battery Pack"
+		Hyperdrive
+		"Fuel Pod" 3
+		"Interference Plating" 2
+		Ramscoop
+
+ship "Forge Corsair" "Forge Corsair (Armed)"
+	outfits
+		"Modified Blaster" 2
+		"Anti-Missile Turret"
+
+		"Impala Plasma Thruster"
+		"Chipmunk Plasma Steering"
+		"D41-HY Shield Generator"
+		"nGVF-DD Fuel Cell"
+		"LP036a Battery Pack"
+		Hyperdrive
+		"Interference Plating"
+		"Fuel Pod"
+
+ship "Forge Corsair" "Forge Corsair (Smuggler)"
+	outfits
+		"Impala Plasma Thruster"
+		"Chipmunk Plasma Steering"
+		"D41-HY Shield Generator"
+		"nGVF-EE Fuel Cell"
+		"LP072a Battery Pack"
+		"Scram Drive"
+		"Interference Plating" 2
+		"Large Radar Jammer"
+		"Cargo Scanner"
+		"Outfit Scanner"
+
+ship "Forge Corsair" "Forge Corsair (Privateer)"
+	outfits
+		"Heavy Laser" 2
+		"Quad Blaster Turret"
+
+		"Impala Plasma Thruster"
+		"Chipmunk Plasma Steering"
+		"D41-HY Shield Generator"
+		"nGVF-DD Fuel Cell"
+		"LP072a Battery Pack"
+		Hyperdrive
+		"Cooling Ducts"
+
+ship "Forge Serenity"
+	sprite "ship/forge serenity"
+	attributes
+		category "Light Freighter"
+		"cost" 1450000
+		"shields" 3400
+		"hull" 2800
+		"required crew" 4
+		"bunks" 18
+		"mass" 350
+		"drag" 6.0
+		"heat dissipation" 0.58
+		"fuel capacity" 600
+		"cargo space" 110
+		"outfit space" 300
+		"weapon capacity" 95
+		"engine capacity" 110
+		weapon
+			"blast radius" 85
+			"shield damage" 1000
+			"hull damage" 400
+			"hit force" 900
+	outfits
+		"Impala Plasma Steering"
+		"Impala Plasma Thruster"
+		"D41-HY Shield Generator"
+		"Meteor Missile Launcher" 2
+		"Meteor Missile" 70
+		"Quad Blaster Turret"
+		Hyperdrive
+		"LP036a Battery Pack"
+		"nGVF-EE Fuel Cell"
+	gun 0.3 -110.8
+	gun -8.2 -105.9
+	gun 8.6 -105.7
+	turret -13 7
+	turret 13 7
+	engine 0.3 96.5 1.3
+	"steering engine" -59.7 21.4 0.8
+		right
+	"steering engine" 59.5 21.4 0.8
+		left
+	"steering engine" -58.5 -17.5 0.7
+		angle -180
+		left
+	"steering engine" 59.3 -17.4 0.7
+		angle -180
+		right
+	leak "leak" 60 50
+	leak "flame" 50 80
+	leak "big leak" 90 30
+	explode "tiny explosion" 25
+	explode "small explosion" 40
+	explode "medium explosion" 25
+	explode "large explosion" 10
+	"final explode" "final explosion medium"
+	description "The Serenity is the largest and most capable hull in the Firefly line. What it lacks in speed it makes up for in cargo space and firepower, with three forward guns and dual turrets. Many a smuggler has made a living hauling questionable freight in one of these tough, reliable freighters."
+
+ship "Forge Serenity" "Forge Serenity (Trader)"
+	outfits
+		"Impala Plasma Thruster"
+		"Greyhound Plasma Steering"
+		"D41-HY Shield Generator"
+		"nGVF-EE Fuel Cell"
+		"LP036a Battery Pack"
+		"Scram Drive"
+		"Fuel Pod" 3
+		"Interference Plating" 2
+		Ramscoop
+
+ship "Forge Serenity" "Forge Serenity (Escort)"
+	outfits
+		"Beam Laser" 3
+		"Quad Blaster Turret"
+		"Anti-Missile Turret"
+
+		"Impala Plasma Thruster"
+		"Greyhound Plasma Steering"
+		"D23-QP Shield Generator"
+		"nGVF-DD Fuel Cell"
+		"LP036a Battery Pack"
+		Hyperdrive
+		"Fuel Pod"
+
+ship "Forge Serenity" "Forge Serenity (Smuggler)"
+	outfits
+		"Impala Plasma Thruster"
+		"Greyhound Plasma Steering"
+		"D41-HY Shield Generator"
+		"nGVF-EE Fuel Cell"
+		"LP072a Battery Pack"
+		"Scram Drive"
+		"Interference Plating" 2
+		"Large Radar Jammer"
+		"Cargo Scanner"
+		"Outfit Scanner"
+		"Fuel Pod"
+
+ship "Forge Serenity" "Forge Serenity (Gunship)"
+	outfits
+		"Heavy Laser" 3
+		"Quad Blaster Turret"
+		"Anti-Missile Turret"
+
+		"Impala Plasma Thruster"
+		"Greyhound Plasma Steering"
+		"D41-HY Shield Generator"
+		"nGVF-DD Fuel Cell"
+		"LP036a Battery Pack"
+		Hyperdrive
+
+ship "Forge Draugr"
+	sprite "ship/forge draugr"
+	attributes
+		category "Medium Warship"
+		"cost" 4800000
+		"shields" 6400
+		"hull" 3900
+		"required crew" 9
+		"bunks" 22
+		"mass" 680
+		"drag" 7.3
+		"heat dissipation" 0.42
+		"fuel capacity" 500
+		"cargo space" 40
+		"outfit space" 430
+		"weapon capacity" 175
+		"engine capacity" 105
+		weapon
+			"blast radius" 100
+			"shield damage" 1000
+			"hull damage" 500
+			"hit force" 1500
+	outfits
+		"Heavy Laser" 2
+		"Beam Laser" 2
+		"Quad Blaster Turret" 2
+		"Anti-Missile Turret"
+
+		"NT-200 Nucleovoltaic"
+		"LP144a Battery Pack"
+		"D67-TM Shield Generator"
+		"Liquid Nitrogen Cooler"
+		Ramscoop
+
+		"A370 Atomic Thruster"
+		"A255 Atomic Steering"
+		"Scram Drive"
+
+	gun -63.7 13.7
+	gun -55.7 13.6
+	gun 55.6 13.6
+	gun 63.7 13.3
+	turret 0 37.5
+	turret 0.2 61.4
+	turret 0.4 -21.3
+	engine 0.3 91.1 1.2
+	engine -9.9 86.7 0.6
+	engine 10.1 87.1 0.6
+	bay "Fighter" 0 72
+		under
+	leak "leak" 50 50
+	leak "flame" 40 80
+	leak "big leak" 80 30
+	explode "tiny explosion" 25
+	explode "small explosion" 40
+	explode "medium explosion" 28
+	explode "large explosion" 12
+	"final explode" "final explosion medium"
+	description "The Draugr is a warship that refuses to stay dead. Four wing-mounted guns, three turrets, and a belly-mounted fighter bay make it an aggressive medium warship that outguns the Firebird and gives the Osprey pause. Strong shields and reinforced hull plating mean it can take hits as well as dish them out. The Grimnir is a blade, the Draugr is a battering ram."
+
+ship "Forge Draugr" "Forge Draugr (Patrol)"
+	outfits
+		"Beam Laser" 4
+		"Blaster Turret" 2
+		"Anti-Missile Turret"
+
+		"Fission Reactor"
+		"nGVF-BB Fuel Cell"
+		"LP072a Battery Pack"
+		"D67-TM Shield Generator"
+		"Cooling Ducts"
+		Ramscoop
+		"Fuel Pod"
+
+		"A370 Atomic Thruster"
+		"A255 Atomic Steering"
+		Hyperdrive
+
+ship "Forge Draugr" "Forge Draugr (Assault)"
+	outfits
+		"Plasma Cannon" 4
+		"Proton Turret"
+		"Quad Blaster Turret"
+		"Anti-Missile Turret"
+
+		"NT-200 Nucleovoltaic"
+		"LP036a Battery Pack"
+		"D67-TM Shield Generator"
+		"Liquid Nitrogen Cooler"
+		"Cooling Ducts"
+
+		"A370 Atomic Thruster"
+		"A255 Atomic Steering"
+		"Scram Drive"
+
+ship "Forge Draugr" "Forge Draugr (Boarding)"
+	outfits
+		"Heavy Laser" 4
+		"Blaster Turret" 2
+		"Anti-Missile Turret"
+
+		"Fission Reactor"
+		"nGVF-BB Fuel Cell"
+		"LP036a Battery Pack"
+		"D41-HY Shield Generator"
+		"Security Station" 3
+		"Brig" 3
+
+		"Impala Plasma Thruster"
+		"Impala Plasma Steering"
+		"Scram Drive"
+
+ship "Forge Marauder"
+	sprite "ship/forge marauder"
+	attributes
+		category "Heavy Warship"
+		"cost" 6500000
+		"shields" 8000
+		"hull" 5500
+		"required crew" 12
+		"bunks" 42
+		"mass" 900
+		"drag" 12.0
+		"heat dissipation" 0.36
+		"fuel capacity" 700
+		"cargo space" 80
+		"outfit space" 500
+		"weapon capacity" 180
+		"engine capacity" 130
+		weapon
+			"blast radius" 150
+			"shield damage" 1500
+			"hull damage" 750
+			"hit force" 2250
+	outfits
+		"Torpedo Launcher" 2
+		"Torpedo" 60
+		"Quad Blaster Turret" 2
+		"Heavy Anti-Missile Turret" 2
+
+		"Fission Reactor"
+		"LP144a Battery Pack"
+		"D94-YV Shield Generator"
+		"Liquid Nitrogen Cooler"
+		"Security Station"
+		"Laser Rifle" 12
+		Ramscoop
+
+		"Impala Plasma Thruster"
+		"Impala Plasma Steering"
+		"Scram Drive"
+
+	gun -3.4 -149.5
+	gun 3.1 -149.5
+	turret -41.6 -36.9
+	turret 41.6 -36.9
+	turret -0.2 -84.2
+	turret 0.2 25.4
+	engine -43.7 134.7 0.8
+	engine 43.7 134.7 0.8
+	engine -74.5 7.9 0.8
+	engine 74.5 7.9 0.8
+	bay "Fighter" -22 74.6
+		under
+	bay "Fighter" 22 74.6
+		under
+	leak "leak" 50 50
+	leak "flame" 40 80
+	leak "big leak" 80 30
+	explode "tiny explosion" 18
+	explode "small explosion" 35
+	explode "medium explosion" 38
+	explode "large explosion" 18
+	explode "huge explosion" 6
+	"final explode" "final explosion large"
+	description "The expedition's mobile base — part warship, part troop carrier, part fighter platform. Four engine pods give it surprising speed for its mass, and twin fighter bays deploy Grimnir escorts. Forty-two bunks, a security station, and a boarding complement of marines make it a formidable boarding vessel. Whatever the Marauder's crew found out there, they came back different."
+
+ship "Forge Marauder" "Forge Marauder (Expedition)"
+	outfits
+		"Beam Laser" 2
+		"Blaster Turret" 2
+		"Anti-Missile Turret" 2
+
+		"Fission Reactor"
+		"nGVF-DD Fuel Cell"
+		"LP072a Battery Pack"
+		"D67-TM Shield Generator"
+		Ramscoop
+		"Fuel Pod" 3
+		"Brig" 2
+
+		"Impala Plasma Thruster"
+		"Impala Plasma Steering"
+		Hyperdrive
+
+ship "Forge Marauder" "Forge Marauder (Artillery)"
+	outfits
+		"Particle Cannon" 2
+		"Proton Turret" 3
+		"Anti-Missile Turret"
+
+		"Fusion Reactor"
+		"LP036a Battery Pack"
+		"D67-TM Shield Generator"
+		"Liquid Nitrogen Cooler"
+		"Cooling Ducts"
+
+		"Impala Plasma Thruster"
+		"Impala Plasma Steering"
+		Hyperdrive
+
+ship "Forge Marauder" "Forge Marauder (Boarding)"
+	outfits
+		"Heavy Laser" 2
+		"Quad Blaster Turret" 2
+		"Anti-Missile Turret" 2
+
+		"Fission Reactor"
+		"nGVF-CC Fuel Cell"
+		"LP072a Battery Pack"
+		"D67-TM Shield Generator"
+		"Security Station" 4
+		"Brig" 4
+		"Fuel Pod" 2
+
+		"Impala Plasma Thruster"
+		"Impala Plasma Steering"
+		"Scram Drive"
+
+ship "Forge Crusader"
+	sprite "ship/forge crusader"
+	attributes
+		category "Heavy Warship"
+		"cost" 24000000
+		"shields" 13500
+		"hull" 7000
+		"required crew" 45
+		"bunks" 95
+		"mass" 2200
+		"drag" 25
+		"heat dissipation" 0.22
+		"fuel capacity" 600
+		"cargo space" 60
+		"outfit space" 800
+		"weapon capacity" 410
+		"engine capacity" 180
+		weapon
+			"blast radius" 260
+			"shield damage" 2900
+			"hull damage" 1450
+			"hit force" 2600
+	outfits
+		"Proton Turret" 10
+		"Heavy Anti-Missile Turret" 2
+
+		"Fusion Reactor"
+		"LP072a Battery Pack"
+		"D94-YV Shield Generator"
+		"Cooling Ducts"
+
+		"A520 Atomic Thruster"
+		"A525 Atomic Steering"
+		"Scram Drive"
+
+	turret -33.2 -104.1
+		under
+	turret -33.2 -104.1
+	turret 33.2 -104.1
+		under
+	turret 33.2 -104.1
+	turret -32.7 -70.3
+		under
+	turret -32.7 -70.3
+	turret 32.7 -70.3
+		under
+	turret 32.7 -70.3
+	turret -32.1 -36
+	turret 32.1 -36
+	turret 0.3 -22.8
+		under
+	turret 0.3 -22.8
+	engine 1.1 170.6 2.8
+	engine -46.9 160.8 1.8
+	engine 46.9 160.8 1.8
+	leak "leak" 30 50
+	leak "flame" 30 80
+	leak "big leak" 50 30
+	explode "small explosion" 35
+	explode "medium explosion" 50
+	explode "large explosion" 55
+	explode "huge explosion" 25
+	"final explode" "final explosion large"
+	description "The Frontier Forge's most ambitious project — and its most closely guarded secret. Twelve turret mounts on double-decked hardpoints, upper and lower batteries providing overlapping fields of fire that can shred fighters, missiles, and anything else that wanders into range. Designed and built with the quiet support of scientists and engineers of conscience scattered across human space. Nobody knows where the hulls are assembled."
+
+ship "Forge Crusader" "Forge Crusader (Broadside)"
+	outfits
+		"Heavy Laser Turret" 6
+		"Laser Turret" 4
+		"Heavy Anti-Missile Turret" 2
+
+		"Fusion Reactor"
+		"LP036a Battery Pack"
+		"D67-TM Shield Generator"
+		"Cooling Ducts"
+
+		"A520 Atomic Thruster"
+		"A525 Atomic Steering"
+		"Scram Drive"
+
+ship "Forge Crusader" "Forge Crusader (Raider)"
+	outfits
+		"Proton Turret" 10
+		"Heavy Anti-Missile Turret" 2
+
+		"Fusion Reactor"
+		"LP036a Battery Pack"
+		"D94-YV Shield Generator"
+		"Cooling Ducts"
+
+		"Orca Plasma Thruster"
+		"Orca Plasma Steering"
+		"Scram Drive"
+
+ship "Forge Crusader" "Forge Crusader (Salvage)"
+	outfits
+		"Quad Blaster Turret" 12
+
+		"Fission Reactor"
+		"nGVF-DD Fuel Cell"
+		"LP072a Battery Pack"
+		"D41-HY Shield Generator"
+		"Cooling Ducts"
+		Ramscoop
+		"Fuel Pod" 2
+
+		"Orca Plasma Thruster"
+		"Orca Plasma Steering"
+		Hyperdrive
+

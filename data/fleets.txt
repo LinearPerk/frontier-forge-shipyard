@@ -1,0 +1,251 @@
+# Frontier Forge Fleets
+#   Frontier Forge Traders (Merchant) — Serenity-class trade convoys, rare Marauder escort
+#   Frontier Forge Raiders (Pirate) — Grimnir wings, smugglers, Marauder+Grimnir, rare Crusader
+#   Frontier Forge Hunters (Pirate) — Draugr wolf packs, deadly and coordinated
+#   Frontier Forge Militia (Militia) — Warship patrols + armed civilian reserve
+
+
+
+fleet "Frontier Forge Traders"
+	government "Merchant"
+	names "civilian"
+	cargo 3
+	personality
+		timid frugal appeasing
+		confusion 30
+	variant 12
+		"Forge Firefly" 2
+	variant 8
+		"Forge Firefly" 3
+	variant 6
+		"Forge Firefly (Courier)" 2
+	variant 4
+		"Forge Firefly (Courier)" 3
+	variant 4
+		"Forge Firefly (Armed)" 2
+	variant 10
+		"Forge Corsair" 2
+	variant 6
+		"Forge Corsair" 3
+	variant 5
+		"Forge Corsair (Hauler)" 2
+	variant 3
+		"Forge Corsair (Hauler)" 3
+	variant 3
+		"Forge Corsair (Armed)" 2
+	variant 6
+		"Forge Serenity" 2
+	variant 4
+		"Forge Serenity (Trader)" 2
+	variant 2
+		"Forge Serenity" 3
+	variant 2
+		"Forge Marauder (Expedition)"
+		"Forge Corsair" 2
+	variant 1
+		"Forge Marauder (Expedition)"
+		"Forge Serenity" 2
+
+
+
+fleet "Frontier Forge Raiders"
+	government "Pirate"
+	names "pirate"
+	cargo 1
+	personality
+		plunders harvests getaway
+		confusion 20
+	variant 15
+		"Forge Grimnir" 2
+	variant 10
+		"Forge Grimnir" 3
+	variant 5
+		"Forge Grimnir" 4
+	variant 8
+		"Forge Grimnir (Gatling)" 2
+	variant 5
+		"Forge Grimnir (Gatling)" 3
+	variant 6
+		"Forge Grimnir (Laser)" 2
+	variant 4
+		"Forge Grimnir (Heavy)" 2
+	variant 3
+		"Forge Grimnir (Striker)" 2
+	variant 6
+		"Forge Firefly (Smuggler)" 2
+	variant 4
+		"Forge Firefly (Blockade Runner)" 2
+	variant 5
+		"Forge Corsair (Smuggler)" 2
+	variant 4
+		"Forge Corsair (Privateer)" 2
+	variant 3
+		"Forge Corsair (Privateer)" 3
+	variant 3
+		"Forge Serenity (Smuggler)" 2
+	variant 4
+		"Forge Draugr"
+	variant 2
+		"Forge Draugr" 2
+	variant 2
+		"Forge Draugr (Assault)"
+	variant 1
+		"Forge Draugr (Boarding)"
+	variant 2
+		"Forge Marauder"
+		"Forge Grimnir" 2
+	variant 1
+		"Forge Marauder (Boarding)"
+		"Forge Grimnir" 2
+	variant 1
+		"Forge Crusader (Salvage)"
+	variant 1
+		"Forge Crusader (Raider)"
+
+
+
+fleet "Frontier Forge Hunters"
+	government "Pirate"
+	names "pirate"
+	cargo 0
+	personality
+		staying nemesis
+		confusion 10
+	variant 8
+		"Forge Draugr" 2
+	variant 6
+		"Forge Draugr (Assault)" 2
+	variant 5
+		"Forge Draugr" 3
+	variant 4
+		"Forge Draugr (Assault)"
+		"Forge Draugr"
+		"Forge Grimnir" 2
+	variant 3
+		"Forge Draugr (Assault)" 2
+		"Forge Grimnir" 3
+	variant 2
+		"Forge Draugr" 2
+		"Forge Grimnir (Heavy)" 2
+	variant 1
+		"Forge Crusader"
+
+
+
+fleet "Frontier Forge Militia"
+	government "Militia"
+	names "militia small"
+	cargo 1
+	personality
+		heroic frugal
+		confusion 20
+	variant 10
+		"Forge Draugr (Patrol)"
+	variant 6
+		"Forge Draugr (Patrol)" 2
+	variant 4
+		"Forge Draugr"
+	variant 3
+		"Forge Draugr (Assault)"
+	variant 4
+		"Forge Marauder (Expedition)"
+	variant 3
+		"Forge Marauder"
+	variant 2
+		"Forge Marauder (Artillery)"
+	variant 1
+		"Forge Crusader"
+	variant 1
+		"Forge Crusader (Broadside)"
+	variant 5
+		"Forge Serenity (Gunship)"
+		"Forge Corsair (Privateer)" 2
+	variant 4
+		"Forge Draugr (Patrol)"
+		"Forge Serenity (Escort)"
+	variant 3
+		"Forge Draugr (Patrol)"
+		"Forge Corsair (Armed)" 2
+	variant 3
+		"Forge Marauder"
+		"Forge Serenity (Gunship)" 2
+	variant 2
+		"Forge Crusader"
+		"Forge Serenity (Gunship)" 2
+		"Forge Corsair (Privateer)" 2
+
+
+
+# Southern core — home turf (highest density)
+
+system Shaula
+	add fleet "Frontier Forge Traders" 800
+	add fleet "Frontier Forge Raiders" 600
+	add fleet "Frontier Forge Hunters" 1500
+	add fleet "Frontier Forge Militia" 1200
+
+system Algenib
+	add fleet "Frontier Forge Traders" 1200
+	add fleet "Frontier Forge Raiders" 800
+	add fleet "Frontier Forge Hunters" 2500
+	add fleet "Frontier Forge Militia" 2000
+
+system Lesath
+	add fleet "Frontier Forge Traders" 2000
+	add fleet "Frontier Forge Raiders" 1500
+	add fleet "Frontier Forge Hunters" 4000
+	add fleet "Frontier Forge Militia" 3000
+
+system Gienah
+	add fleet "Frontier Forge Traders" 1200
+	add fleet "Frontier Forge Raiders" 800
+	add fleet "Frontier Forge Hunters" 2500
+	add fleet "Frontier Forge Militia" 2000
+
+# Southern Republic border — traders and militia patrols
+
+system Girtab
+	add fleet "Frontier Forge Traders" 2500
+	add fleet "Frontier Forge Militia" 3000
+
+system Atria
+	add fleet "Frontier Forge Traders" 3000
+	add fleet "Frontier Forge Militia" 4000
+
+system Dschubba
+	add fleet "Frontier Forge Traders" 3000
+	add fleet "Frontier Forge Militia" 4000
+
+# Major pirate ports — moderate density
+
+system Arneb
+	add fleet "Frontier Forge Traders" 2000
+	add fleet "Frontier Forge Raiders" 1500
+	add fleet "Frontier Forge Hunters" 4000
+
+system Misam
+	add fleet "Frontier Forge Traders" 2000
+	add fleet "Frontier Forge Raiders" 1500
+	add fleet "Frontier Forge Hunters" 4000
+
+system Men
+	add fleet "Frontier Forge Traders" 2000
+	add fleet "Frontier Forge Raiders" 1500
+	add fleet "Frontier Forge Hunters" 4000
+
+# Northern pirate — rare spawns
+
+system Almaaz
+	add fleet "Frontier Forge Traders" 3000
+	add fleet "Frontier Forge Raiders" 2500
+	add fleet "Frontier Forge Hunters" 6000
+
+# Republic core — traders and militia only
+
+system Tarazed
+	add fleet "Frontier Forge Traders" 3000
+	add fleet "Frontier Forge Militia" 4000
+
+system Kraz
+	add fleet "Frontier Forge Traders" 3000
+	add fleet "Frontier Forge Militia" 4000

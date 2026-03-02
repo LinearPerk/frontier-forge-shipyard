@@ -1,0 +1,132 @@
+# Frontier Forge Ships - Shipyard Definitions
+#
+# Composable shipyards — planets stack multiple:
+#   "Frontier Forge Fighters"    — Grimnir
+#   "Frontier Forge Surplus"     — Firefly
+#   "Frontier Forge Freight"     — Corsair
+#   "Frontier Forge Haulers"     — Serenity
+#   "Frontier Forge Arsenal"     — Draugr + Marauder + Crusader
+#
+# Spaceport text: ES has no "add spaceport" keyword, so bare "spaceport"
+# replaces the planet's vanilla description. Each planet block below
+# reproduces the vanilla spaceport text and appends a forge dealer
+# paragraph as the final entry. Source: archive/ES data/data/map planets.txt
+
+
+
+shipyard "Frontier Forge Fighters"
+	"Forge Grimnir"
+
+shipyard "Frontier Forge Surplus"
+	"Forge Firefly"
+
+shipyard "Frontier Forge Freight"
+	"Forge Corsair"
+
+shipyard "Frontier Forge Haulers"
+	"Forge Serenity"
+
+shipyard "Frontier Forge Arsenal"
+	"Forge Draugr"
+	"Forge Marauder"
+	"Forge Crusader"
+
+
+
+# Full hubs — warships + fighters + one transport each
+
+planet "Greenrock"
+	add shipyard "Frontier Forge Fighters"
+	add shipyard "Frontier Forge Freight"
+	add shipyard "Frontier Forge Arsenal"
+
+planet "Buccaneer Bay"
+	add shipyard "Frontier Forge Fighters"
+	add shipyard "Frontier Forge Haulers"
+	add shipyard "Frontier Forge Arsenal"
+
+
+
+# Kraz — all three Firefly line transports
+
+planet Rust
+	add shipyard "Frontier Forge Surplus"
+	add shipyard "Frontier Forge Freight"
+	add shipyard "Frontier Forge Haulers"
+	spaceport `The spaceport is a gleaming, modern steel structure, with docks extending out from it like spokes from an axle, and magnetic clamps to hold ships of any size.`
+	spaceport `	As you walk into the building, you cannot help gawking. Most of the shops are staffed by robots instead of human beings, and the elevators are so smooth and silent that you can hardly tell they are moving at all. Even though you know that all this technology was provided by the marketing department of Kraz Cybernetics as a showcase of their capabilities, you cannot help but be inspired by this vision of what the future of all planets might some day be.`
+	spaceport `	Tucked behind the gleaming Kraz showrooms, a quieter hangar sells frontier forge freighters — Fireflies, Corsairs, and Serenities, each one rebuilt to spec. The builder insists they're better than anything off a factory line.`
+
+
+
+# Firefly backwaters — quiet worlds where independent builders sell cheap transports
+
+planet Harmony
+	add shipyard "Frontier Forge Surplus"
+	spaceport `The spaceport is on the outskirts of one of the larger cities, with a few medium-sized skyscrapers and many tall smokestacks for factories and oil refineries. The starship hangars here are shaped like oversized barns, and close to the hangars, grain is stored in silos. The spaceport police are on horseback.`
+	spaceport `	Inside the building at the center of the port is a large cafeteria, with food of the simple "meat and potatoes" variety. You notice a few children and teenagers in rough, homemade clothing staring out the windows at the ships taking off and landing.`
+	spaceport `	An independent shipwright has set up at the edge of the landing field, three hand-built Fireflies parked in a row with prices chalked on their hulls. The locals seem unsure whether to be impressed or concerned.`
+
+planet Lichen
+	add shipyard "Frontier Forge Surplus"
+	spaceport `The spaceport is built on a small mountain, one of the rare places where enough bedrock rises above the soil to provide a firm foundation for large buildings and high ground during floods.`
+	spaceport `	The warehouses and market are built of concrete, but the smaller buildings on the outskirts of the port are wood framed. Moss is growing everywhere, and in places the wood is stippled with mold. But the people are friendly enough, unhurried and peaceful.`
+	spaceport `	A noodle soup restaurant near the center of the port town seems to be the gathering place of choice. Whatever they're cooking inside, it smells delicious.`
+	spaceport `	Near the fuel pumps, a sun-bleached tarp shades a pair of Forge Fireflies. A handwritten sign reads: "Cheap. Reliable. Mostly." The builder is asleep in a lawn chair.`
+
+planet Sundrinker
+	add shipyard "Frontier Forge Surplus"
+	spaceport `There are only two concrete landing platforms in the spaceport, and that is plenty for the amount of traffic they receive. A wide cleared-off field of dirt is available beyond that in case an unusual number of ships ever need to land. The two platforms and the spaceport buildings are all built near to the tops of the hills, out of the way of the flood waters. This is both the spaceport and the only town on Sundrinker. A single road winds between a few buildings; one seems to be a saloon, and another, a general store.`
+	spaceport `	A frontier forge mechanic has staked out a corner of the port, selling custom-built Fireflies to farmers and prospectors. The ships look rough, but the engines turn over clean.`
+
+
+
+# Pirate ports — Corsair smuggler freighters
+
+planet Freedom
+	add shipyard "Frontier Forge Freight"
+	spaceport `Apparently anarchists are not opposed to commerce as long as no one is regulating it. Half of the landing pads in the spaceport are available for ships; the other half have been taken over by farmers busy selling their produce, or merchants buying from incoming ships and piling crates into large trucks.`
+	spaceport `	A sign above the entrance to the spaceport bar reads, "Fine home-brewed whiskey! Get smashed without getting taxed!" Further down the street, a sign over what appears to be a real estate office reads, "Why not settle where The Man can't reach you?"`
+	spaceport `	Inexplicably, the only advertising on the seafood restaurant across the street is an enormous banner proclaiming, "We have brown rice."`
+	spaceport `	Behind the main hangars, a row of Forge Corsairs sits on bare dirt. A mechanic leans against one, arms crossed, watching you decide.`
+
+planet Covert
+	add shipyard "Frontier Forge Freight"
+	spaceport `From the moment you landed, you have been followed by a pair of security guards with earpieces and laser guns. The spaceport is one enormous building, with square, straight hallways and featureless walls, and nearly every door you pass is locked. Cameras at each hallway intersection pivot to watch as you approach. This is simultaneously one of the most secure spaceports you have visited, and one of the most dangerous, although if you do not do anything to provoke the animosity of the cartel, you will probably be able to leave in peace.`
+	spaceport `	A frontier forge dealer operates out of a converted mining shed, selling Corsairs to anyone who doesn't ask too many questions.`
+
+
+
+# Premium pirate port — Corsair + Serenity
+
+planet "Smuggler's Den"
+	add shipyard "Frontier Forge Freight"
+	add shipyard "Frontier Forge Haulers"
+	spaceport `It is a strange but indisputable fact that pirates smell worse than ordinary human beings. In this day and age, where even the cheapest shuttlecraft at least has a sonic shower, there is no logical explanation for it, except that anarchist tendencies must somehow go hand in hand with a tendency to reject society's norms around hygiene. Here in a space station, with nothing but recycled air to breathe, the effect is overpowering.`
+	spaceport `	The forge dealers here keep their stock in a guarded yard — Corsairs and Serenities, tuned up and cargo-ready. Proper haulers for proper runs.`
+
+
+
+# Combat ships — major pirate ports
+
+planet Haven
+	add shipyard "Frontier Forge Arsenal"
+	spaceport `The spaceport is old and dingy, with piles of litter in the gutters and graffiti on many of the alley walls. Many of the shops are closed, the windows boarded over or covered with yellowing paper.`
+	spaceport `	This is an independent world, and a relatively stable settlement, but the effects of its separation from the rest of the galaxy are evident. A few young people carrying large backpacks eye you with interest, perhaps trying to gauge their chances of getting you to give them a cheap lift off-planet.`
+	spaceport `	A locked compound at the far end of the port sells forge warships — Draugrs, Marauders, and the occasional Crusader. The prices are real. So are the guns.`
+
+planet "New Tortuga"
+	add shipyard "Frontier Forge Arsenal"
+	spaceport `As you walk through the spaceport, scattered amidst the bars and black-markets, you notice a surprising number of religious buildings. There are a variety of churches, synagogues, mosques, temples, and others you can't quite remember the names of. Most of the shops are run not by pirates, but by ordinary folk, many wearing religious garb. The citizens here interact with pirates with friendliness and warmth, rather than the hostility and fear you see on other pirate worlds.`
+	spaceport `	The relative peace is frequently broken by a pirate band wandering through the spaceport. While perhaps an auditory nuisance, the pirates here are generally more obedient and disciplined than those seen on other planets. Their ships are more advanced too, judging by the armaments and engines you noticed in the hangar.`
+	spaceport `	The frontier forge arsenal occupies a fortified dock near the factory district. Draugrs and Marauders line the yard, and rumor says a Crusader cycles through when the price is right.`
+
+
+
+# Tarazed — Arsenal + Serenity transports
+
+planet Wayfarer
+	add shipyard "Frontier Forge Haulers"
+	add shipyard "Frontier Forge Arsenal"
+	spaceport `The spaceport is clearly the artifact of an architect who was as familiar with alien architecture as with human. Instead of square angles, it has many curved walls and domes. The landing pads jut out from the building at various heights. Some of the landing pads are designed with docking tubes specifically for Quarg visitors, and the ceilings are unusually high to accommodate the Quarg, several of whom are walking around and mingling with the humans here.`
+	spaceport `	A nondescript hangar on the military side of the port stocks forge warships and a row of Serenity-class haulers. Kraz engineers have been seen inspecting the Draugrs with professional interest. The Crusader in the back bay draws a crowd whenever the doors are open.`

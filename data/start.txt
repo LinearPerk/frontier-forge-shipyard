@@ -1,0 +1,98 @@
+# Frontier Forge Start: Dead Run
+# Revolutionary thriller — vanguard cadre extraction from Syndicate corporate space
+# Unarmed Forge Serenity (Trader), 4.5M debt as cover identity, hostile Syndicate on launch
+# Route: head west out of Syndicate space, south through Republic to pirate worlds
+# Destination: Greenrock (Shaula) — pirate world, requires bribe to land
+# Chain: escape mission (tank Syndicate rep) → transponder patch at Greenrock → cover mission (restore rep)
+
+
+start "frontier-forge"
+	name "Dead Run"
+	description `The Syndicate owns the factories, the banks, and the shipping lanes. The people who build the ships don't own them. The people who fly the routes don't set the prices. But on the frontier, a long struggle is building — ship by ship, world by world.`
+	description `	Your cell's operation is blown. Someone has to fly the asset out of Syndicate space — an unarmed Forge Serenity, four and a half million in debt, enforcement closing fast. They're calling it a dead run. You volunteered.`
+	thumbnail "scene/thumbnail"
+	date 16 11 3013
+	system "Markab"
+	planet "Hephaestus"
+	conversation "frontier forge escape intro"
+	account
+		credits 5000
+		score 400
+		mortgage Mortgage
+			principal 4500000
+			interest 0.004
+			term 365
+	set "license: Pilot's"
+	set "species: human"
+	set "human space start"
+	set "Intro [0]: offered"
+	set "Intro [0]: declined"
+	set "Intro [0]: done"
+	set "frontier forge escape"
+
+
+conversation "frontier forge escape intro"
+	scene "scene/briefing"
+	`A dead channel lights up. The one you secretly hoped would never fire. Two words: DEAD RUN.`
+	`	The operation on Hephaestus is blown. Syndicate Financial flagged the loan structure. SFS enforcement is mobilizing. Someone has to fly the asset out before they seize it.`
+	`	Four and a half million credits, borrowed against a ship mortgage and funneled to frontier forge communities building outside Syndicate control. The money is gone. Your comrades scattered clean. You're the one who takes the ship.`
+	`	The title transfer needs a name — who do you want to be?`
+	name
+	action
+		give ship "Forge Serenity (Trader)" "Forge Serenity"
+	scene "scene/bay"
+	`	The Serenity. She stands out on a Syndicate pad — too much craft in the hull lines, too much care in every seam. This ship was built by someone who gave a damn. Interference plating, fuel pods, no weapons. A runner, not a fighter.`
+	`	The debt's in your name now. Four and a half million — a legitimate mortgage, clean paper. The Republic will see an independent captain who took out a loan on a freighter. Nothing more. The Syndicate...`
+	choice
+		`	(Board the ship.)`
+	scene "scene/launch"
+	`	The pad lights go red. Security drones are already sweeping the outer berths — SFS recovery teams, not police. It doesn't look like they're here to make an arrest.`
+	`	A coded fragment scrolls across the nav console, still decrypting the coded channel burst. Head west. Clear Syndicate space. Hunt is on. You know the plan by heart. There's a safe house far to the south, the pirate world Greenrock in the Shaula system.`
+	choice
+		`	(Launch.)`
+	scene "scene/space"
+	`	Markab stretches wide. Three contacts on the scope — SFS fighters. Take it one jump at a time. Head west. Make it count.`
+	choice
+		`	(Done.)`
+
+
+mission "Frontier Forge Escape"
+	landing
+	name "Dead Run"
+	description "Escape west out of Syndicate space — your transponder is flagged and corporate ports are closed. Head south to the pirate worlds. Land on Greenrock in the Shaula system. Verify at the forge shipyard."
+	source "Hephaestus"
+	destination "Greenrock"
+	to offer
+		has "frontier forge escape"
+	on offer
+		"reputation: Syndicate" -= 100
+		accept
+	npc evade
+		government "Syndicate"
+		personality staying nemesis hunting vindictive
+		system "Markab"
+		ship "Splinter" "SFS Recovery"
+		ship "Quicksilver" "SFS Pursuit Alpha"
+		ship "Quicksilver" "SFS Pursuit Beta"
+	npc
+		government "Syndicate"
+		personality entering nemesis hunting vindictive
+		ship "Quicksilver" "SFS Hunter Alpha"
+		ship "Quicksilver" "SFS Hunter Beta"
+		ship "Quicksilver" "SFS Hunter Gamma"
+	on complete
+		clear "frontier forge escape"
+		set "frontier forge cover active"
+		dialog `Greenrock. You give the code phrase at the forge shipyard. A woman in coveralls checks the title, confirms the debt transferred clean. She hands you a chip — transponder patch. "You're clean. Corporate systems won't flag you anymore." She studies you for a long moment. "We'll find you when it's time."`
+
+
+mission "Frontier Forge Cover"
+	landing
+	invisible
+	to offer
+		has "frontier forge cover active"
+	on offer
+		"reputation: Syndicate" += 100
+		clear "frontier forge cover active"
+		dialog `Your transponder reads clean. As far as the Syndicate is concerned, you're just another independent captain servicing a mortgage.`
+		fail
