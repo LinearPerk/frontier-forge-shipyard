@@ -8,15 +8,15 @@ A decentralized network of independent shipwrights, garage builders, and free po
 
 <table>
 <tr>
-<td align="center"><img src="screenshots/firefly-line.png" width="280"><br><em>The Firefly Line</em></td>
-<td align="center"><img src="screenshots/corsairs-in-flight.png" width="280"><br><em>Corsairs in Flight</em></td>
+<td align="center"><img src="screenshots/firefly-line.png" width="280"></td>
+<td align="center"><img src="screenshots/corsairs-in-flight.png" width="280"></td>
 </tr>
 <tr>
-<td align="center"><img src="screenshots/draugr-and-grimnir.png" width="280"><br><em>Draugr & Grimnir</em></td>
-<td align="center"><img src="screenshots/marauder-fleet.png" width="280"><br><em>Marauder Fleet</em></td>
+<td align="center"><img src="screenshots/draugr-and-grimnir.png" width="280"></td>
+<td align="center"><img src="screenshots/marauder-fleet.png" width="280"></td>
 </tr>
 <tr>
-<td align="center" colspan="2"><img src="screenshots/marauder-engines.png" width="280"><br><em>Marauder — Four Engine Pods</em></td>
+<td align="center" colspan="2"><img src="screenshots/marauder-engines.png" width="280"></td>
 </tr>
 </table>
 
