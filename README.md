@@ -92,7 +92,7 @@ A revolutionary thriller. Your vanguard cell's operation is blown — Syndicate 
 
 ## Compatibility
 
-All ships balanced against vanilla benchmarks with deliberate trade-offs. Compatible with vanilla Endless Sky — uses `add shipyard` and `add fleet` to integrate without overwriting. Spaceport descriptions reproduce the vanilla text with forge dealer flavor appended.
+All ships balanced against vanilla benchmarks with deliberate trade-offs. Compatible with vanilla Endless Sky, should be compatible with most other plugins.
 
 ## Installation
 
