@@ -11,3 +11,15 @@ All sprites created by LinearPerk.
 | forge corsair | LinearPerk | GPL-3+ |
 | forge draugr | LinearPerk | GPL-3+ |
 | forge marauder | LinearPerk | GPL-3+ |
+
+## Scene Images
+
+Source images found on Pinterest. Original authors to be tracked down.
+
+| Image | Author | Source | License |
+|-------|--------|--------|---------|
+| briefing.jpg | TBD | Pinterest | TBD |
+| bay.jpg | TBD | Pinterest | TBD |
+| launch.jpg | TBD | Pinterest | TBD |
+| space.jpg | TBD | Pinterest | TBD |
+| thumbnail.jpg | TBD | Pinterest | TBD |
